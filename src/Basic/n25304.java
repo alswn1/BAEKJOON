@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.*;
 
 public class n25304 {
-    static void main() throws IOException {
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int sum = Integer.parseInt(br.readLine());
         int count = Integer.parseInt(br.readLine());
