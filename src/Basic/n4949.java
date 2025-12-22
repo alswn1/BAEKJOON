@@ -9,7 +9,6 @@ public class n4949 {
         String str;
         StringBuilder sb = new StringBuilder();
         while(!(str = br.readLine()).equals(".")) {
-            str = str.replaceAll("[a-zA-Z ]", "");
             ArrayDeque<Character> st = new ArrayDeque<>();
             boolean isBalanced = true;
 
