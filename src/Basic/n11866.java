@@ -10,17 +10,16 @@ public class n11866 {
         int N = Integer.parseInt(st.nextToken());
         int K = Integer.parseInt(st.nextToken());
 
-        ArrayDeque<Integer> list = new ArrayDeque<>();
+        List<Integer> list = new ArrayList<>();
         for (int i = 1; i <= N; i++) {
             list.add(i);
         }
 
         StringJoiner sj = new StringJoiner(", ", "<", ">");
+        int index = 0;
         while(!list.isEmpty()) {
-            for (int j = 0; j < K-1; j++) {
-                list.addLast(list.removeFirst());
-            }
-            sj.add(list.removeFirst().toString());
+            index = (index + K-1) % list.size();
+            sj.add(list.remove(index).toString());
         }
         System.out.println(sj);
     }
